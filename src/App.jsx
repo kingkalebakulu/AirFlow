@@ -153,10 +153,10 @@ const Header = () => {
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* FULL BACKGROUND IMAGE */}
+      {/* FULL BACKGROUND IMAGE - Updated to a working image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=2069&auto=format&fit=crop" 
+          src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop" 
           alt="HVAC Background" 
           className="w-full h-full object-cover"
         />
@@ -260,31 +260,31 @@ const Services = () => {
       icon: Snowflake, 
       title: 'AC Installation', 
       desc: 'Expert split & ducted AC installation for homes and businesses.',
-      image: 'https://unsplash.com/photos/multiple-air-conditioning-units-hanging-indoors--GoD4ix1ZsM=format&fit=crop'
+      image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069&auto=format&fit=crop'
     },
     { 
       icon: Wind, 
       title: 'AC Repairs', 
       desc: 'Fast diagnostics and reliable repair services for all brands.',
-      image: 'https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=2070&auto=format&fit=crop'
+      image: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=2069&auto=format&fit=crop'
     },
     { 
       icon: Flame, 
       title: 'Heating Systems', 
       desc: 'Complete heating solutions to keep you warm during winter.',
-      image: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=2070&auto=format&fit=crop'
+      image: 'https://images.unsplash.com/photo-1585060544812-6b45742d762f?q=80&w=2081&auto=format&fit=crop'
     },
     { 
       icon: Fan, 
       title: 'Ventilation', 
       desc: 'Custom ventilation systems to improve air quality and circulation.',
-      image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop'
+      image: 'https://images.unsplash.com/photo-1527011046414-4781f1f94f8c?q=80&w=2069&auto=format&fit=crop'
     },
     { 
       icon: Droplets, 
       title: 'Duct Cleaning', 
       desc: 'Professional deep cleaning to remove allergens and dust.',
-      image: 'https://images.unsplash.com/photo-1584622050111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop'
+      image: 'https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=2070&auto=format&fit=crop'
     },
     { 
       icon: Building2, 
@@ -360,28 +360,28 @@ const News = () => {
       title: "Summer Maintenance Guide",
       date: "Oct 12, 2024",
       category: "Tips",
-      image: "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?q=80&w=2070&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1614631446709-6e3e53610263?q=80&w=2070&auto=format&fit=crop",
       desc: "Prepare your AC for the Durban heat with these essential maintenance tips to ensure efficiency."
     },
     {
       title: "New Eco-Friendly Units",
       date: "Sep 28, 2024",
       category: "Product News",
-      image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=80&w=2070&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?q=80&w=2070&auto=format&fit=crop",
       desc: "We now stock the latest energy-saving inverter air conditioners that cut electricity costs by up to 40%."
     },
     {
       title: "The Importance of Air Quality",
       date: "Sep 15, 2024",
       category: "Health",
-      image: "https://images.unsplash.com/photo-1534398079543-7ae6d016b86a?q=80&w=2070&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1599309618037-c6b22eb8fa41?q=80&w=2070&auto=format&fit=crop",
       desc: "How regular filter cleaning and ventilation can significantly reduce allergens in your home."
     },
     {
       title: "Why Is My AC Leaking Water?",
       date: "Aug 30, 2024",
       category: "Troubleshooting",
-      image: "https://images.unsplash.com/photo-1527011046414-4781f1f94f8c?q=80&w=2069&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=2069&auto=format&fit=crop",
       desc: "Water leaks can damage your property. Discover the 3 most common causes and when to call a pro immediately."
     },
     {
@@ -395,21 +395,21 @@ const News = () => {
       title: "Commercial vs Residential HVAC",
       date: "Jul 25, 2024",
       category: "Commercial",
-      image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop",
       desc: "Understanding the key differences in maintenance schedules for large business premises versus private homes."
     },
     {
       title: "5 Signs You Need a Tune-Up",
       date: "Jul 10, 2024",
       category: "Maintenance",
-      image: "https://images.unsplash.com/photo-1631541909061-71e349d1f203?q=80&w=1905&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop",
       desc: "Strange noises? Weak airflow? Here are the red flags that indicate your system is struggling and needs attention."
     },
     {
       title: "Going Green with HVAC",
       date: "Jun 28, 2024",
       category: "Sustainability",
-      image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2070&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1518558997970-4ddc236affcd?q=80&w=2070&auto=format&fit=crop",
       desc: "Eco-friendly practices and modern refrigerants that lower your carbon footprint while keeping your home comfortable."
     }
   ];
@@ -476,7 +476,7 @@ const WhyChooseUs = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-cyan-500/10 border border-white/10 group">
               <div className="absolute inset-0 bg-cyan-500/20 group-hover:bg-transparent transition-colors z-10"></div>
               <img 
-                src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070&auto=format&fit=crop" 
                 alt="HVAC Technician" 
                 className="w-full h-[500px] object-cover transform group-hover:scale-105 transition-transform duration-700"
               />
@@ -668,187 +668,50 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
   
   const faqs = [
-    { q: 'How long does installation take?', a: 'Most residential installations take 4-8 hours. Commercial projects vary by size but we provide accurate timelines during the quote process.' },
-    { q: 'Do you offer emergency repairs?', a: 'Yes! We provide 24/7 emergency HVAC services. Contact us anytime via phone or WhatsApp for urgent repairs.' },
-    { q: 'What brands do you service?', a: 'We service all major HVAC brands including Daikin, LG, Samsung, Mitsubishi, Carrier, and more.' },
-    { q: 'Do you provide warranties?', a: 'Absolutely! All our installations come with manufacturer warranties plus our own workmanship guarantee for your peace of mind.' },
-    { q: 'How often should I service my HVAC system?', a: 'We recommend professional servicing every 6-12 months to maintain efficiency and prevent costly repairs.' }
+    {
+      question: "Do you offer emergency 24/7 services?",
+      answer: "Yes, we understand that AC breakdowns can happen at any time. We have a dedicated team for after-hours and weekend emergencies throughout Durban and surrounding areas."
+    },
+    {
+      question: "What brands of air conditioners do you service?",
+      answer: "We are experienced with all major brands including Samsung, LG, Carrier, Daikin, Midea, Alliance, and York. We can install, repair, and service any make or model."
+    },
+    {
+      question: "How often should I service my AC unit?",
+      answer: "For residential units, we recommend a major service at least once a year. For commercial units or units in high-usage areas, every 3 to 6 months is recommended to ensure optimal efficiency and air quality."
+    },
+    {
+      question: "Is there a warranty on your workmanship?",
+      answer: "Absolutely. All our installations come with a manufacturer's warranty, and we provide a 12-month guarantee on our workmanship to give you complete peace of mind."
+    }
   ];
 
   return (
-    <section ref={ref} className="py-24 bg-slate-950">
+    <section ref={ref} className="py-24 bg-slate-950 relative">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-4">FAQ</h2>
-          <p className="text-xl text-gray-400">Common questions answered</p>
-        </div>
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">FAQ</h2>
+            <p className="text-xl text-gray-400">Common questions answered</p>
+          </div>
 
-        <div className={`max-w-3xl mx-auto space-y-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          {faqs.map((faq, i) => (
-            <div key={i} className="border border-white/10 rounded-xl overflow-hidden bg-slate-900/50">
-              <button
-                onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full px-6 py-5 flex items-center justify-between hover:bg-slate-800 transition-colors"
-              >
-                <span className="text-left font-semibold text-gray-200">{faq.q}</span>
-                {openIndex === i ? (
-                  <ChevronUp className="w-5 h-5 text-cyan-500 flex-shrink-0" />
-                ) : (
-                  <ChevronDown className="w-5 h-5 text-gray-500 flex-shrink-0" />
-                )}
-              </button>
-              {openIndex === i && (
-                <div className="px-6 py-5 bg-slate-900 border-t border-white/5">
-                  <p className="text-gray-400 leading-relaxed">{faq.a}</p>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-// Emergency Banner
-const EmergencyBanner = () => {
-  return (
-    <section className="py-20 bg-gradient-to-r from-orange-600 to-red-700 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iNCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuMSIvPjwvc3ZnPg==')] animate-pulse"></div>
-      <div className="container mx-auto px-4 text-center text-white relative z-10">
-        <div className="inline-flex p-4 rounded-full bg-white/10 backdrop-blur-sm mb-6 animate-pulse">
-          <Clock className="w-12 h-12" />
-        </div>
-        <h2 className="text-3xl md:text-5xl font-bold mb-4">HVAC Emergency?</h2>
-        <p className="text-xl mb-10 text-orange-100 font-medium">We are available 24/7. Don't wait!</p>
-        <a
-          href={WHATSAPP_LINK}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 bg-white text-orange-600 px-10 py-5 rounded-xl text-xl font-bold hover:scale-105 transition-all shadow-2xl animate-bounce"
-        >
-          <Phone className="w-6 h-6" />
-          Call Now
-        </a>
-      </div>
-    </section>
-  );
-};
-
-// Contact Section
-const Contact = () => {
-  const [ref, isVisible] = useScrollAnimation();
-  
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    const name = formData.get('name');
-    const phone = formData.get('phone');
-    const service = formData.get('service');
-    const message = formData.get('message');
-    
-    const whatsappMessage = `Hello, I'd like a quote for HVAC services.%0A%0AName: ${name}%0APhone: ${phone}%0AService: ${service}%0AMessage: ${message}`;
-    window.open(`${WHATSAPP_LINK}?text=${whatsappMessage}`, '_blank');
-  };
-
-  return (
-    <section id="contact" ref={ref} className="py-24 bg-slate-900">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-4">GET YOUR FREE QUOTE</h2>
-          <p className="text-xl text-gray-400">Let's discuss your HVAC needs today</p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-            <form onSubmit={handleSubmit} className="space-y-6 bg-slate-800/50 p-8 rounded-2xl border border-white/5">
-              <div>
-                <label className="block text-gray-300 font-semibold mb-2 text-sm uppercase tracking-wide">Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  className="w-full px-4 py-3 bg-slate-900 border border-slate-700 text-white rounded-lg focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500 transition-all placeholder-gray-600"
-                  placeholder="Your full name"
-                />
-              </div>
-              <div>
-                <label className="block text-gray-300 font-semibold mb-2 text-sm uppercase tracking-wide">Phone</label>
-                <input
-                  type="tel"
-                  name="phone"
-                  required
-                  className="w-full px-4 py-3 bg-slate-900 border border-slate-700 text-white rounded-lg focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500 transition-all placeholder-gray-600"
-                  placeholder="Your phone number"
-                />
-              </div>
-              <div>
-                <label className="block text-gray-300 font-semibold mb-2 text-sm uppercase tracking-wide">Service Needed</label>
-                <select
-                  name="service"
-                  required
-                  className="w-full px-4 py-3 bg-slate-900 border border-slate-700 text-white rounded-lg focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500 transition-all"
+          <div className={`space-y-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            {faqs.map((faq, i) => (
+              <div key={i} className="bg-slate-900 border border-white/10 rounded-xl overflow-hidden">
+                <button
+                  className="w-full p-6 text-left flex items-center justify-between text-white hover:bg-slate-800 transition-colors"
+                  onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 >
-                  <option value="">Select a service</option>
-                  <option value="AC Installation">AC Installation</option>
-                  <option value="AC Repair">AC Repair</option>
-                  <option value="Heating">Heating Systems</option>
-                  <option value="Ventilation">Ventilation</option>
-                  <option value="Maintenance">Maintenance</option>
-                  <option value="Emergency">Emergency Service</option>
-                </select>
-              </div>
-              <div>
-                <label className="block text-gray-300 font-semibold mb-2 text-sm uppercase tracking-wide">Message</label>
-                <textarea
-                  name="message"
-                  rows="4"
-                  className="w-full px-4 py-3 bg-slate-900 border border-slate-700 text-white rounded-lg focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500 transition-all placeholder-gray-600"
-                  placeholder="Tell us about your needs..."
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg text-lg font-bold hover:scale-[1.02] transition-all shadow-lg shadow-cyan-900/20"
-              >
-                Send via WhatsApp
-              </button>
-            </form>
-          </div>
-
-          <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-            <div className="bg-gradient-to-br from-cyan-700 to-blue-800 rounded-2xl p-10 text-white h-full flex flex-col justify-center relative overflow-hidden">
-              <h3 className="text-3xl font-bold mb-10 relative z-10">Contact Information</h3>
-              <div className="space-y-8 relative z-10">
-                <div className="flex items-start gap-6 group">
-                  <div className="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-white/20 transition-colors">
-                    <Phone className="w-7 h-7" />
-                  </div>
-                  <div>
-                    <p className="font-bold mb-1 text-lg">Phone</p>
-                    <p className="text-cyan-100 text-lg tracking-wide">+27 61 922 9670</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-6 group">
-                  <div className="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-white/20 transition-colors">
-                    <Mail className="w-7 h-7" />
-                  </div>
-                  <div>
-                    <p className="font-bold mb-1 text-lg">Email</p>
-                    <p className="text-cyan-100 text-lg">info@airflowpro.co.za</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-6 group">
-                  <div className="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-white/20 transition-colors">
-                    <MapPin className="w-7 h-7" />
-                  </div>
-                  <div>
-                    <p className="font-bold mb-1 text-lg">Service Area</p>
-                    <p className="text-cyan-100 text-lg">Durban & Surrounding Areas</p>
-                  </div>
+                  <span className="font-bold text-lg">{faq.question}</span>
+                  {openIndex === i ? <ChevronUp className="text-cyan-400" /> : <ChevronDown className="text-gray-400" />}
+                </button>
+                <div
+                  className={`px-6 overflow-hidden transition-all duration-300 ${openIndex === i ? 'max-h-48 pb-6 opacity-100' : 'max-h-0 opacity-0'}`}
+                >
+                  <p className="text-gray-400 leading-relaxed">{faq.answer}</p>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
@@ -856,227 +719,108 @@ const Contact = () => {
   );
 };
 
-// Footer
+// Footer Component
 const Footer = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
-    <footer className="bg-black text-white pt-20 pb-10 border-t border-white/10">
+    <footer id="contact" className="bg-slate-950 pt-24 pb-12 border-t border-white/10 text-gray-300">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          
+          {/* Brand */}
           <div>
             <Logo className="mb-6" />
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Your trusted partner for all HVAC needs in Durban. Quality service, reliable technicians, and fair pricing guaranteed.
+              Durban's premier HVAC specialists. Dedicated to providing superior climate control solutions for homes and businesses.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 bg-slate-900 border border-white/10 rounded-lg flex items-center justify-center hover:bg-cyan-600 hover:border-cyan-600 transition-all">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-slate-900 border border-white/10 rounded-lg flex items-center justify-center hover:bg-cyan-600 hover:border-cyan-600 transition-all">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-slate-900 border border-white/10 rounded-lg flex items-center justify-center hover:bg-cyan-600 hover:border-cyan-600 transition-all">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-slate-900 border border-white/10 rounded-lg flex items-center justify-center hover:bg-cyan-600 hover:border-cyan-600 transition-all">
-                <Twitter className="w-5 h-5" />
-              </a>
+              {[Facebook, Instagram, Twitter, Linkedin].map((Icon, i) => (
+                <a key={i} href="#" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-cyan-600 hover:text-white transition-all border border-white/10">
+                  <Icon size={18} />
+                </a>
+              ))}
             </div>
           </div>
 
+          {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-bold mb-6 text-white">Quick Links</h4>
-            <ul className="space-y-3">
-              {['Home', 'About Us', 'Services', 'News', 'Reviews', 'Contact'].map(link => (
-                <li key={link}>
-                  <a href={`#${link.toLowerCase().replace(' ', '')}`} className="text-gray-400 hover:text-cyan-400 transition-colors flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-cyan-600 rounded-full"></span>
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-bold mb-6 text-white">Services</h4>
-            <ul className="space-y-3">
-              {['AC Installation', 'AC Repair', 'Heating Systems', 'Ventilation', 'Duct Cleaning', 'Commercial HVAC'].map(service => (
-                <li key={service}>
-                  <a href="#services" className="text-gray-400 hover:text-cyan-400 transition-colors flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-cyan-600 rounded-full"></span>
-                    {service}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-bold mb-6 text-white">Contact Info</h4>
+            <h4 className="text-white font-bold text-lg mb-6 uppercase tracking-wider">Quick Links</h4>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-gray-400">
-                <Phone className="w-5 h-5 mt-1 text-cyan-500 flex-shrink-0" />
+              {['Home', 'Services', 'Projects', 'About Us', 'Contact'].map(link => (
+                <li key={link}>
+                  <a href="#" className="hover:text-cyan-400 transition-colors flex items-center gap-2 group">
+                    <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform text-cyan-500" /> {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="text-white font-bold text-lg mb-6 uppercase tracking-wider">Services</h4>
+            <ul className="space-y-4">
+              {['AC Installation', 'Repairs & Service', 'Duct Cleaning', 'Commercial HVAC', 'Ventilation'].map(link => (
+                <li key={link}>
+                  <a href="#" className="hover:text-cyan-400 transition-colors flex items-center gap-2 group">
+                    <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform text-cyan-500" /> {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h4 className="text-white font-bold text-lg mb-6 uppercase tracking-wider">Contact Us</h4>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-4">
+                <MapPin className="w-5 h-5 text-cyan-500 flex-shrink-0 mt-1" />
+                <span>123 Smith Street, Durban Central, 4001, South Africa</span>
+              </li>
+              <li className="flex items-center gap-4">
+                <Phone className="w-5 h-5 text-cyan-500 flex-shrink-0" />
                 <span>+27 61 922 9670</span>
               </li>
-              <li className="flex items-start gap-3 text-gray-400">
-                <MapPin className="w-5 h-5 mt-1 text-cyan-500 flex-shrink-0" />
-                <span>Durban, KZN, SA</span>
+              <li className="flex items-center gap-4">
+                <Mail className="w-5 h-5 text-cyan-500 flex-shrink-0" />
+                <span>info@airflowpro.co.za</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} AirFlow Pro HVAC. All rights reserved.
-          </p>
-          <button
-            onClick={scrollToTop}
-            className="bg-slate-800 hover:bg-slate-700 text-white px-5 py-2.5 rounded-lg flex items-center gap-2 transition-all border border-white/5"
-          >
-            <ChevronUp className="w-4 h-4" />
-            Back to Top
-          </button>
+        <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+          <p>© {new Date().getFullYear()} AirFlow Pro. All rights reserved.</p>
+          <div className="flex gap-6">
+            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+          </div>
         </div>
       </div>
     </footer>
   );
 };
 
-// Floating WhatsApp Button
-const FloatingWhatsApp = () => {
-  return (
-    <div className="fixed bottom-6 right-6 z-50">
-        <a
-          href={WHATSAPP_LINK}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center w-16 h-16 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg shadow-green-500/30 hover:scale-110 transition-all animate-bounce"
-        >
-          <MessageCircle className="w-8 h-8" />
-        </a>
-    </div>
-  );
-};
-
-// Popup Modal
-const PopupModal = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsOpen(true);
-    }, 5000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (!isOpen) return null;
-
-  return (
-    <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fadeIn">
-      <div className="bg-slate-900 border border-white/10 rounded-2xl max-w-md w-full p-8 relative shadow-2xl transform scale-100 animate-scaleIn">
-        <button
-          onClick={() => setIsOpen(false)}
-          className="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors"
-        >
-          <X className="w-6 h-6" />
-        </button>
-        
-        <div className="text-center">
-          <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-orange-500/20">
-            <Award className="w-10 h-10 text-white" />
-          </div>
-          <h3 className="text-2xl font-bold text-white mb-2">New Customer Special!</h3>
-          <p className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500 mb-4">15% OFF</p>
-          <p className="text-gray-400 mb-8">
-            Book your first AC service or installation this week and get an exclusive discount.
-          </p>
-          <a
-            href={`${WHATSAPP_LINK}?text=I want to claim the 15% OFF discount!`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-xl text-lg font-bold hover:scale-105 transition-all mb-4 shadow-lg shadow-cyan-900/20"
-          >
-            Claim Your Discount
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 // Main App Component
-export default function App() {
-  
-  // Dynamic Favicon Setup
-  useEffect(() => {
-    const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
-    link.type = 'image/svg+xml';
-    link.rel = 'icon';
-    // This encoded SVG matches the new Logo component
-    link.href = `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwNmI2ZDQiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzYjgyZjYiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBkPSJNNTAgNSBMOTAgMjAgVjUwIEM5MCA3NSA1MCA5NSA1MCA5NSBDNTAgOTUgMTAgNzUgMTAgNTAgVjIwIEw1MCA1IFoiIGZpbGw9InVybCgjZykiLz48cGF0aCBkPSJNNTAgODAgQzUwIDgwIDY1IDcwIDY1IDU1IEM2NSA0NSA1OCA0MCA1OCA0MCBDNTggNDAgNjIgNDggNTggNTUgQzU4IDU1IDU4IDM1IDUwIDI1IEM0MiAzNSA0MiA1NSA0MiA1NSBDMzggNDggNDIgNDAgNDIgNDAgQzQyIDQwIDM1IDQ1IDM1IDU1IEMzNSA3MCA1MCA4MCA1MCA4MCBaIiBmaWxsPSIjZjk3MzE2Ii8+PC9zdmc+`;
-    document.getElementsByTagName('head')[0].appendChild(link);
-    document.title = "AirFlow Pro - HVAC Services Durban";
-  }, []);
-
+const App = () => {
   return (
-    <div className="min-h-screen bg-slate-950 text-white selection:bg-cyan-500 selection:text-white">
+    <div className="font-sans bg-slate-950 text-gray-100 selection:bg-cyan-500/30">
       <SmoothScroll />
       <Header />
-      <Hero />
-      <TrustBadges />
-      <Services />
-      <News />
-      <WhyChooseUs />
-      <Process />
-      <ServiceAreas />
-      <Reviews />
-      <FAQ />
-      <EmergencyBanner />
-      <Contact />
+      <main>
+        <Hero />
+        <TrustBadges />
+        <Services />
+        <WhyChooseUs />
+        <Process />
+        <News />
+        <ServiceAreas />
+        <Reviews />
+        <FAQ />
+      </main>
       <Footer />
-      <FloatingWhatsApp />
-      <PopupModal />
-      
-      <style jsx global>{`
-        @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-        @keyframes scaleIn {
-          from { transform: scale(0.9); opacity: 0; }
-          to { transform: scale(1); opacity: 1; }
-        }
-        .animate-fadeIn {
-          animation: fadeIn 0.8s ease-out forwards;
-        }
-        .animate-scaleIn {
-          animation: scaleIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-        }
-        
-        html {
-          scroll-behavior: smooth;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-          width: 10px;
-        }
-        ::-webkit-scrollbar-track {
-          background: #0f172a;
-        }
-        ::-webkit-scrollbar-thumb {
-          background: #334155;
-          border-radius: 5px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-          background: #475569;
-        }
-      `}</style>
     </div>
   );
-}
+};
+
+export default App;

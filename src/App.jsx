@@ -260,7 +260,7 @@ const Services = () => {
       icon: Snowflake, 
       title: 'AC Installation', 
       desc: 'Expert split & ducted AC installation for homes and businesses.',
-      image: 'https://pikaso.cdnpk.net/private/production/3023782241/conversions/render-preview.jpg?token=exp=1768262400~hmac=6e9b908a86473417b686c95df45a8a4282a826d1300162b5b5525f9218503a72'
+      image: 'https://unsplash.com/photos/multiple-air-conditioning-units-hanging-indoors--GoD4ix1ZsM'
     },
     { 
       icon: Wind, 

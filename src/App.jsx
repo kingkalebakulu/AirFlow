@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Menu, X, Phone, Mail, MapPin, Star, ChevronDown, ChevronUp, ArrowRight, Check, Award, Clock, Shield, Users, Wind, Snowflake, Flame, Fan, Droplets, Building2, MessageCircle, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Menu, X, Phone, Mail, MapPin, Star, ChevronDown, ChevronUp, ArrowRight, Check, Award, Clock, Shield, Users, Wind, Snowflake, Flame, Fan, Droplets, Building2, MessageCircle, Facebook, Instagram, Linkedin, Twitter, Calendar, Tag } from 'lucide-react';
 
 // WhatsApp Configuration
 const WHATSAPP_NUMBER = "27619229670";
@@ -42,18 +42,34 @@ const useScrollAnimation = () => {
   return [ref, isVisible];
 };
 
-// Logo Component
+// New Custom Unique Logo
 const Logo = ({ className = "" }) => (
-  <div className={`flex items-center gap-2 ${className}`}>
-    <div className="relative">
-      <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-lg rotate-45 flex items-center justify-center shadow-lg shadow-cyan-500/20">
-        <Wind className="w-6 h-6 text-white -rotate-45" />
-      </div>
-      <div className="absolute -top-1 -right-1 w-4 h-4 bg-orange-500 rounded-full animate-pulse shadow-md shadow-orange-500/50"></div>
+  <div className={`flex items-center gap-3 ${className}`}>
+    <div className="relative w-12 h-12 flex items-center justify-center">
+      {/* Abstract Snowflake/Flame Shield Logo */}
+      <svg viewBox="0 0 100 100" className="w-full h-full drop-shadow-lg filter">
+        <defs>
+          <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#06b6d4" /> {/* Cyan */}
+            <stop offset="100%" stopColor="#3b82f6" /> {/* Blue */}
+          </linearGradient>
+        </defs>
+        {/* Shield Background */}
+        <path d="M50 5 L90 20 V50 C90 75 50 95 50 95 C50 95 10 75 10 50 V20 L50 5 Z" fill="url(#logoGradient)" />
+        {/* Flame Element (Orange) */}
+        <path d="M50 80 C50 80 65 70 65 55 C65 45 58 40 58 40 C58 40 62 48 58 55 C58 55 58 35 50 25 C42 35 42 55 42 55 C38 48 42 40 42 40 C42 40 35 45 35 55 C35 70 50 80 50 80 Z" fill="#f97316" className="animate-pulse" />
+        {/* Frost Overlay */}
+        <circle cx="50" cy="50" r="35" fill="none" stroke="white" strokeWidth="2" strokeOpacity="0.3" strokeDasharray="4 4" />
+      </svg>
     </div>
     <div>
-      <h1 className="text-2xl font-bold text-white leading-none tracking-tight">AirFlow</h1>
-      <p className="text-xs text-cyan-400 font-semibold tracking-[0.2em]">PRO HVAC</p>
+      <h1 className="text-2xl font-black text-white leading-none tracking-tighter italic">
+        AIR<span className="text-cyan-400">FLOW</span>
+      </h1>
+      <div className="flex items-center gap-1">
+        <div className="h-0.5 w-4 bg-orange-500 rounded-full"></div>
+        <p className="text-[10px] text-gray-300 font-bold tracking-[0.3em] uppercase">Pro Services</p>
+      </div>
     </div>
   </div>
 );
@@ -74,9 +90,9 @@ const Header = () => {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'Services', href: '#services' },
+    { name: 'News', href: '#news' },
     { name: 'About', href: '#about' },
     { name: 'Reviews', href: '#reviews' },
-    { name: 'Areas', href: '#areas' },
     { name: 'Contact', href: '#contact' }
   ];
 
@@ -91,7 +107,7 @@ const Header = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-300 hover:text-cyan-400 transition-colors relative group text-sm font-medium tracking-wide"
+                className="text-gray-300 hover:text-cyan-400 transition-colors relative group text-sm font-bold tracking-wide uppercase"
               >
                 {link.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all group-hover:w-full"></span>
@@ -99,7 +115,7 @@ const Header = () => {
             ))}
           </nav>
 
-          <a href="#contact" className="hidden md:block bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-2.5 rounded-lg hover:shadow-lg hover:shadow-cyan-500/30 hover:scale-105 transition-all font-medium">
+          <a href="#contact" className="hidden md:block bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-2.5 rounded-lg hover:shadow-lg hover:shadow-cyan-500/30 hover:scale-105 transition-all font-bold tracking-wide">
             Get a Quote
           </a>
 
@@ -140,26 +156,26 @@ const Hero = () => {
       {/* FULL BACKGROUND IMAGE */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop" 
+          src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=2069&auto=format&fit=crop" 
           alt="HVAC Background" 
           className="w-full h-full object-cover"
         />
         {/* Dark Overlays for Text Readability */}
-        <div className="absolute inset-0 bg-slate-950/70 z-10"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/60 to-transparent z-10"></div>
+        <div className="absolute inset-0 bg-slate-950/80 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/70 to-transparent z-10"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-20">
         <div className="max-w-3xl animate-fadeIn">
-          <div className="inline-block px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 font-semibold mb-6 backdrop-blur-sm">
-            ❄️ #1 Rated HVAC Service in Durban
+          <div className="inline-block px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 font-bold text-sm tracking-wider mb-6 backdrop-blur-sm uppercase">
+            ❄️ #1 Rated HVAC Team in Durban
           </div>
-          <h1 className="text-5xl lg:text-8xl font-bold mb-6 leading-tight tracking-tight text-white">
-            Mastering Your <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Indoor Climate</span>
+          <h1 className="text-5xl lg:text-8xl font-black mb-6 leading-tight tracking-tight text-white">
+            MASTER YOUR <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">INDOOR CLIMATE</span>
           </h1>
-          <p className="text-xl text-gray-200 font-light mb-8 max-w-xl leading-relaxed">
-            Premium residential & commercial heating, cooling & ventilation solutions. We bring absolute comfort to your doorstep with 24/7 expert support.
+          <p className="text-xl text-gray-300 font-light mb-8 max-w-xl leading-relaxed">
+            Premium residential & commercial heating, cooling & ventilation solutions. Experience absolute comfort with our 24/7 expert support system.
           </p>
           
           <div className="flex flex-wrap gap-4 mb-10">
@@ -168,7 +184,7 @@ const Hero = () => {
               { icon: Award, text: 'Certified Pros' },
               { icon: Shield, text: 'Guaranteed Work' }
             ].map((item, i) => (
-              <div key={i} className="flex items-center gap-2 bg-white/5 backdrop-blur-md border border-white/10 px-5 py-2.5 rounded-full">
+              <div key={i} className="flex items-center gap-2 bg-white/5 backdrop-blur-md border border-white/10 px-5 py-2.5 rounded-full hover:bg-white/10 transition-colors">
                 <item.icon className="w-5 h-5 text-cyan-400" />
                 <span className="text-sm font-medium text-gray-100">{item.text}</span>
               </div>
@@ -176,7 +192,7 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href="#contact" className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-4 rounded-xl text-lg font-bold hover:scale-105 transition-all shadow-2xl shadow-orange-500/30 text-center">
+            <a href="#contact" className="bg-orange-600 hover:bg-orange-700 text-white px-10 py-4 rounded-xl text-lg font-bold hover:scale-105 transition-all shadow-2xl shadow-orange-600/30 text-center">
               Get Free Quote
             </a>
             <a
@@ -238,36 +254,37 @@ const TrustBadges = () => {
 const Services = () => {
   const [ref, isVisible] = useScrollAnimation();
   
+  // Updated with robust, correct images from Unsplash
   const services = [
     { 
       icon: Snowflake, 
       title: 'AC Installation', 
       desc: 'Expert split & ducted AC installation for homes and businesses.',
-      image: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=2069&auto=format&fit=crop'
+      image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a783?q=80&w=2070&auto=format&fit=crop'
     },
     { 
       icon: Wind, 
       title: 'AC Repairs', 
       desc: 'Fast diagnostics and reliable repair services for all brands.',
-      image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop'
+      image: 'https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=2070&auto=format&fit=crop'
     },
     { 
       icon: Flame, 
       title: 'Heating Systems', 
       desc: 'Complete heating solutions to keep you warm during winter.',
-      image: 'https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?q=80&w=2070&auto=format&fit=crop'
+      image: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=2070&auto=format&fit=crop'
     },
     { 
       icon: Fan, 
       title: 'Ventilation', 
       desc: 'Custom ventilation systems to improve air quality and circulation.',
-      image: 'https://images.unsplash.com/photo-1584622050111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop'
+      image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop'
     },
     { 
       icon: Droplets, 
       title: 'Duct Cleaning', 
       desc: 'Professional deep cleaning to remove allergens and dust.',
-      image: 'https://images.unsplash.com/photo-1585822606565-5c1eb45aee47?q=80&w=2070&auto=format&fit=crop'
+      image: 'https://images.unsplash.com/photo-1584622050111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop'
     },
     { 
       icon: Building2, 
@@ -283,12 +300,13 @@ const Services = () => {
   };
 
   return (
-    <section id="services" ref={ref} className="py-24 bg-slate-950">
-      <div className="container mx-auto px-4">
+    <section id="services" ref={ref} className="py-24 bg-slate-950 relative">
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-50"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <span className="text-cyan-500 font-bold tracking-wider uppercase text-sm">What We Do</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-4">Our Premium Services</h2>
-          <p className="text-xl text-gray-400">Click a service to book via WhatsApp instantly</p>
+          <h2 className="text-4xl md:text-5xl font-black text-white mt-2 mb-4">OUR PREMIUM SERVICES</h2>
+          <p className="text-xl text-gray-400">Click any service card to book instantly via WhatsApp</p>
         </div>
 
         <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -300,14 +318,14 @@ const Services = () => {
               style={{ transitionDelay: `${i * 100}ms` }}
             >
               {/* Image Header */}
-              <div className="relative h-56 overflow-hidden">
-                 <div className="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/10 transition-colors z-10"></div>
+              <div className="relative h-64 overflow-hidden">
+                 <div className="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/0 transition-colors z-10 duration-500"></div>
                  <img 
                     src={service.image} 
                     alt={service.title}
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                  />
-                 <div className="absolute top-4 right-4 z-20 bg-slate-900/80 backdrop-blur-md p-2.5 rounded-xl border border-white/20">
+                 <div className="absolute top-4 right-4 z-20 bg-slate-900/90 backdrop-blur-md p-3 rounded-xl border border-white/20 shadow-xl">
                     <service.icon className="w-6 h-6 text-cyan-400" />
                  </div>
               </div>
@@ -315,15 +333,120 @@ const Services = () => {
               {/* Content */}
               <div className="p-8 relative">
                 <div className="absolute top-0 right-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <MessageCircle className="w-6 h-6 text-green-500" />
+                  <MessageCircle className="w-8 h-8 text-green-500" />
                 </div>
                 
                 <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-400 mb-6 leading-relaxed">{service.desc}</p>
+                <p className="text-gray-400 mb-6 leading-relaxed line-clamp-2">{service.desc}</p>
                 
-                <div className="flex items-center text-cyan-400 font-semibold group-hover:gap-2 transition-all">
+                <div className="flex items-center text-cyan-400 font-bold uppercase tracking-wide text-sm group-hover:gap-2 transition-all">
                   Book Now <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// News Section (NEW)
+const News = () => {
+  const [ref, isVisible] = useScrollAnimation();
+
+  const newsItems = [
+    {
+      title: "Summer Maintenance Guide",
+      date: "Oct 12, 2024",
+      category: "Tips",
+      image: "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?q=80&w=2070&auto=format&fit=crop",
+      desc: "Prepare your AC for the Durban heat with these essential maintenance tips to ensure efficiency."
+    },
+    {
+      title: "New Eco-Friendly Units",
+      date: "Sep 28, 2024",
+      category: "Product News",
+      image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=80&w=2070&auto=format&fit=crop",
+      desc: "We now stock the latest energy-saving inverter air conditioners that cut electricity costs by up to 40%."
+    },
+    {
+      title: "The Importance of Air Quality",
+      date: "Sep 15, 2024",
+      category: "Health",
+      image: "https://images.unsplash.com/photo-1534398079543-7ae6d016b86a?q=80&w=2070&auto=format&fit=crop",
+      desc: "How regular filter cleaning and ventilation can significantly reduce allergens in your home."
+    },
+    {
+      title: "Why Is My AC Leaking Water?",
+      date: "Aug 30, 2024",
+      category: "Troubleshooting",
+      image: "https://images.unsplash.com/photo-1527011046414-4781f1f94f8c?q=80&w=2069&auto=format&fit=crop",
+      desc: "Water leaks can damage your property. Discover the 3 most common causes and when to call a pro immediately."
+    },
+    {
+      title: "Smart Thermostats Explained",
+      date: "Aug 12, 2024",
+      category: "Technology",
+      image: "https://images.unsplash.com/photo-1558402529-d2638a7023e9?q=80&w=2070&auto=format&fit=crop",
+      desc: "Control your climate from your phone. We break down the top benefits of upgrading to a smart wifi system."
+    },
+    {
+      title: "Commercial vs Residential HVAC",
+      date: "Jul 25, 2024",
+      category: "Commercial",
+      image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070&auto=format&fit=crop",
+      desc: "Understanding the key differences in maintenance schedules for large business premises versus private homes."
+    },
+    {
+      title: "5 Signs You Need a Tune-Up",
+      date: "Jul 10, 2024",
+      category: "Maintenance",
+      image: "https://images.unsplash.com/photo-1631541909061-71e349d1f203?q=80&w=1905&auto=format&fit=crop",
+      desc: "Strange noises? Weak airflow? Here are the red flags that indicate your system is struggling and needs attention."
+    },
+    {
+      title: "Going Green with HVAC",
+      date: "Jun 28, 2024",
+      category: "Sustainability",
+      image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2070&auto=format&fit=crop",
+      desc: "Eco-friendly practices and modern refrigerants that lower your carbon footprint while keeping your home comfortable."
+    }
+  ];
+
+  return (
+    <section id="news" ref={ref} className="py-24 bg-slate-900 border-t border-white/5">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+          <div className="max-w-2xl">
+            <span className="text-orange-500 font-bold tracking-wider uppercase text-sm">News & Updates</span>
+            <h2 className="text-4xl md:text-5xl font-black text-white mt-2">LATEST FROM THE TEAM</h2>
+          </div>
+          <a href="#" className="flex items-center gap-2 text-cyan-400 font-bold hover:text-white transition-colors">
+            View All Posts <ArrowRight className="w-5 h-5" />
+          </a>
+        </div>
+
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          {newsItems.map((item, i) => (
+            <div key={i} className="group cursor-pointer bg-slate-800 rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-300 flex flex-col h-full">
+              <div className="h-48 relative overflow-hidden flex-shrink-0">
+                <div className="absolute top-4 left-4 z-10 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-white flex items-center gap-2">
+                  <Tag className="w-3 h-3 text-orange-500" /> {item.category}
+                </div>
+                <img 
+                  src={item.image} 
+                  alt={item.title} 
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex items-center gap-2 text-gray-400 text-xs mb-3 font-medium">
+                  <Calendar className="w-3 h-3" /> {item.date}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors line-clamp-2">{item.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-3 flex-grow">{item.desc}</p>
+                <span className="text-cyan-500 text-sm font-bold uppercase tracking-wide group-hover:underline mt-auto">Read Article</span>
               </div>
             </div>
           ))}
@@ -346,14 +469,14 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section id="about" ref={ref} className="py-24 bg-slate-900 relative overflow-hidden">
+    <section id="about" ref={ref} className="py-24 bg-slate-950 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-cyan-500/10 border border-white/10 group">
               <div className="absolute inset-0 bg-cyan-500/20 group-hover:bg-transparent transition-colors z-10"></div>
               <img 
-                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop" 
                 alt="HVAC Technician" 
                 className="w-full h-[500px] object-cover transform group-hover:scale-105 transition-transform duration-700"
               />
@@ -366,7 +489,7 @@ const WhyChooseUs = () => {
 
           <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <span className="text-cyan-500 font-bold tracking-wider uppercase text-sm">About Us</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-6">Why Choose AirFlow Pro?</h2>
+            <h2 className="text-4xl md:text-5xl font-black text-white mt-2 mb-6">WHY CHOOSE AIRFLOW?</h2>
             <p className="text-lg text-gray-400 mb-8 leading-relaxed">
               We're not just fixing ACs; we're ensuring your environment is perfect. With over a decade of experience in Durban, we bring reliability, expertise, and a friendly face to every job.
             </p>
@@ -399,10 +522,10 @@ const Process = () => {
   ];
 
   return (
-    <section ref={ref} className="py-24 bg-slate-950">
+    <section ref={ref} className="py-24 bg-slate-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">How It Works</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-4">HOW IT WORKS</h2>
           <p className="text-xl text-gray-400">Simple, straightforward process</p>
         </div>
 
@@ -438,16 +561,16 @@ const ServiceAreas = () => {
   ];
 
   return (
-    <section id="areas" ref={ref} className="py-24 bg-slate-900">
+    <section id="areas" ref={ref} className="py-24 bg-slate-950">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Service Areas</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-4">SERVICE AREAS</h2>
           <p className="text-xl text-gray-400">Proudly serving Durban and surrounding areas</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-            <h3 className="text-2xl font-bold text-white mb-8">Areas We Serve</h3>
+            <h3 className="text-2xl font-bold text-white mb-8">Where We Operate</h3>
             <div className="grid grid-cols-2 gap-4">
               {areas.map((area, i) => (
                 <div key={i} className="flex items-center gap-3 bg-slate-800/50 p-4 rounded-xl border border-white/5 hover:border-cyan-500/50 transition-colors group">
@@ -500,7 +623,7 @@ const Reviews = () => {
     <section id="reviews" ref={ref} className="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-y border-white/5">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Client Stories</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-4">CLIENT STORIES</h2>
           <p className="text-xl text-cyan-400">Don't just take our word for it</p>
         </div>
 
@@ -556,7 +679,7 @@ const FAQ = () => {
     <section ref={ref} className="py-24 bg-slate-950">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">FAQ</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-4">FAQ</h2>
           <p className="text-xl text-gray-400">Common questions answered</p>
         </div>
 
@@ -632,7 +755,7 @@ const Contact = () => {
     <section id="contact" ref={ref} className="py-24 bg-slate-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Get Your Free Quote</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-4">GET YOUR FREE QUOTE</h2>
           <p className="text-xl text-gray-400">Let's discuss your HVAC needs today</p>
         </div>
 
@@ -744,7 +867,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div>
-            <Logo className="mb-6 [&_h1]:text-white [&_p]:text-cyan-400" />
+            <Logo className="mb-6" />
             <p className="text-gray-400 mb-6 leading-relaxed">
               Your trusted partner for all HVAC needs in Durban. Quality service, reliable technicians, and fair pricing guaranteed.
             </p>
@@ -767,7 +890,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-bold mb-6 text-white">Quick Links</h4>
             <ul className="space-y-3">
-              {['Home', 'About Us', 'Services', 'Reviews', 'Contact'].map(link => (
+              {['Home', 'About Us', 'Services', 'News', 'Reviews', 'Contact'].map(link => (
                 <li key={link}>
                   <a href={`#${link.toLowerCase().replace(' ', '')}`} className="text-gray-400 hover:text-cyan-400 transition-colors flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-cyan-600 rounded-full"></span>
@@ -888,6 +1011,18 @@ const PopupModal = () => {
 
 // Main App Component
 export default function App() {
+  
+  // Dynamic Favicon Setup
+  useEffect(() => {
+    const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+    link.type = 'image/svg+xml';
+    link.rel = 'icon';
+    // This encoded SVG matches the new Logo component
+    link.href = `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwNmI2ZDQiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzYjgyZjYiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBkPSJNNTAgNSBMOTAgMjAgVjUwIEM5MCA3NSA1MCA5NSA1MCA5NSBDNTAgOTUgMTAgNzUgMTAgNTAgVjIwIEw1MCA1IFoiIGZpbGw9InVybCgjZykiLz48cGF0aCBkPSJNNTAgODAgQzUwIDgwIDY1IDcwIDY1IDU1IEM2NSA0NSA1OCA0MCA1OCA0MCBDNTggNDAgNjIgNDggNTggNTUgQzU4IDU1IDU4IDM1IDUwIDI1IEM0MiAzNSA0MiA1NSA0MiA1NSBDMzggNDggNDIgNDAgNDIgNDAgQzQyIDQwIDM1IDQ1IDM1IDU1IEMzNSA3MCA1MCA4MCA1MCA4MCBaIiBmaWxsPSIjZjk3MzE2Ii8+PC9zdmc+`;
+    document.getElementsByTagName('head')[0].appendChild(link);
+    document.title = "AirFlow Pro - HVAC Services Durban";
+  }, []);
+
   return (
     <div className="min-h-screen bg-slate-950 text-white selection:bg-cyan-500 selection:text-white">
       <SmoothScroll />
@@ -895,6 +1030,7 @@ export default function App() {
       <Hero />
       <TrustBadges />
       <Services />
+      <News />
       <WhyChooseUs />
       <Process />
       <ServiceAreas />
